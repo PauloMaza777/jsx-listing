@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "./index.css";
 
 function App() {
   const [books, setBooks] = useState(undefined);
@@ -38,10 +39,35 @@ function App() {
 
   return (
     <>
-      <button onClick={handleClick}>Populate books variable</button>
-      <button onClick={() => setBooks(undefined)}>Remove books variable</button>
+      <div class="container">
+        <h1>Información de libros</h1>
+        {/* Botón para poblar la variable books */}
+        <button class="button populate" onClick={handleClick}>Poblar variable books</button>
+        {/* Botón para eliminar la variable books */}
+        <button class="button remove" onClick={() => setBooks(undefined)}>Eliminar variable books</button>
 
-      {/* Write your code here */}
+        {/* Mostrar información de libros solo si la variable books tiene datos */}
+        {books && (
+          <ul class="list">
+            {/* Recorrer la lista de libros */}
+            {books.map((book) => (
+              <li key={book.id}>
+                {/* Mostrar el título del libro */}
+                <h2>{book.title}</h2>
+
+                {/* Mostrar los autores del libro, unidos por una coma y un espacio */}
+                <p>Autores: {book.authors.join(", ")}</p>
+
+                {/* Mostrar la editorial del libro */}
+                <p>Editorial: {book.editorial}</p>
+
+                {/* Mostrar la portada del libro */}
+                <img src={book.cover} alt={book.title} />
+              </li>
+            ))}
+          </ul>
+        )}
+      </div>
     </>
   );
 }

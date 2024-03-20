@@ -1,0 +1,81 @@
+/* Estilo general para el contenedor principal */
+body{
+    background-color: antiquewhite;
+}
+
+.container {
+    max-width: 800px;
+    margin: 10px;
+    padding: 10px;
+}
+
+/* Estilo para el título de la página */
+h1 {
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Estilo para los botones */
+button {
+    padding: 10px 15px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+/* Estilo para el botón "Poblar variable books" */
+.button.populate {
+    background-color: #009900;
+    color: #fff;
+    
+}
+
+/* sombreado al pasar el cursor por encima del boton de mostrar */
+button.populate:hover{
+    color: #044804;
+}
+
+/* Estilo para el botón "Eliminar variable books" */
+.button.remove {
+    background-color: #ff0000;
+    color: #fff;
+}
+
+/* sombreado al pasar el cursor por encima del boton de eliminar */
+button.button.remove:hover{
+    color: #7a0505;
+}
+
+/* Estilo para la lista de libros */
+.list{
+    list-style: square;
+    padding: 10px;
+    margin: 10px;
+}
+
+/* Estilo para el título del libro */
+h2 {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 25px;
+    margin-top: 10px;
+}
+
+/* Estilo para la información del libro */
+p {
+    font-size: 15px;
+    margin-top: 1px;
+    margin-block-end: 10px;
+}
+
+/* Estilo para la imagen de la portada del libro */
+img {
+    border-radius: 10px;
+    border-style: solid;
+    border-color: #000000;
+    width: 150px;
+    margin-bottom: 40px;
+  }
+  
